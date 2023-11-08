@@ -1,16 +1,22 @@
 import React from 'react'
-import { StyleSheet, View, StatusBar, Text, ScrollView, Image, ImageBackground} from 'react-native';
+import { StyleSheet, View, StatusBar, Text, ScrollView, Image, ImageBackground, Button} from 'react-native';
 
 const bgImage = require('../assets/LivingRoom.jpg')
 
-function WelcomeScreen() {
+function WelcomeScreen(props) {
   return (
     
-    <ImageBackground style={mystyles.background} source={bgImage}>
+    <ImageBackground blurRadius={3} style={mystyles.background} source={bgImage}>
         <Image source={require('../assets/UnStuffLogo.png')} style={mystyles.logo}/>
         <Text style={mystyles.tagLine}>Unstuff Your Life</Text>
-        <View style={mystyles.loginButton}/>
-        <View style={mystyles.regButton}/>
+
+        <View style={mystyles.loginButton}>
+            <Button title='Login' color='white' style={mystyles.btntextColor}/>
+        </View>
+
+        <View style={mystyles.regButton}>
+            <Button title='Register' color='white' />
+        </View>
     </ImageBackground>
    
   )
@@ -25,13 +31,24 @@ const mystyles = StyleSheet.create({
     },
     loginButton:{
         width: "100%",
-        height: 70,
+        height: 50,
         backgroundColor:'blue',
+        borderRadius: 50,
+        justifyContent: 'center'
     },
     regButton:{
         width: "100%",
-        height: 70,
+        height: 50,
         backgroundColor:'hotpink',
+        borderRadius: 50,
+        marginBottom:30,
+        justifyContent: 'center'
+        
+    },
+    btntextColor:{
+        color:'white',
+        fontWeight:900,
+
     },
     logo:{
         width:200,
@@ -43,6 +60,7 @@ const mystyles = StyleSheet.create({
     tagLine:{
         bottom: 400
     }
+
   });
 
   export default WelcomeScreen; 

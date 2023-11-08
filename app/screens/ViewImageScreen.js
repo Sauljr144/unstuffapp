@@ -1,12 +1,22 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import color from '../config/color'
+import { Feather } from '@expo/vector-icons'; 
+import { AntDesign } from '@expo/vector-icons'; 
+import { Ionicons } from '@expo/vector-icons'; 
+
+
 
 function ViewImageScreen() {
   return (
 
     <View style={styles.container}>
-        <View style={styles.closeIcon}></View>
-        <View style={styles.deleteIcon}></View>
+        <View style={styles.closeIcon}>
+        <AntDesign name="closesquareo" size={28} color="white" />
+        </View>
+        <View style={styles.deleteIcon}>
+        <Ionicons name="trash-outline" size={30} color="white" />
+        </View>
         <Image resizeMode='contain' style={styles.image} source={require("../assets/oldChair.jpg")}/>
     </View>
   )
@@ -18,24 +28,26 @@ const styles = StyleSheet.create({
         height:'100%'
     },
     container:{
-        backgroundColor:'#000',
+        backgroundColor: color.black,
         flex: 1
     },
     closeIcon:{
         width:50,
         height:50,
-        backgroundColor:'blue',
         position: 'absolute',
         top: 60,
-        left: 30
+        left: 30,
+        justifyContent:'center',
+        alignItems:'center'
     },
     deleteIcon:{
         width:50,
         height:50,
-        backgroundColor:'hotpink',
         position: 'absolute',
         top: 60,
-        right: 30
+        right: 30,
+        justifyContent:'center',
+        alignItems:'center'
     }
 })
 
