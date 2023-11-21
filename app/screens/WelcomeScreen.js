@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, View, StatusBar, Text, ScrollView, Image, ImageBackground, Button} from 'react-native';
+import AppBtn from '../components/AppBtn';
 
 const bgImage = require('../assets/LivingRoom.jpg')
 
@@ -10,13 +11,17 @@ function WelcomeScreen(props) {
         <Image source={require('../assets/UnStuffLogo.png')} style={mystyles.logo}/>
         <Text style={mystyles.tagLine}>Unstuff Your Life</Text>
 
-        <View style={mystyles.loginButton}>
+        {/* <View style={mystyles.loginButton}>
             <Button title='Login' color='white' style={mystyles.btntextColor}/>
-        </View>
+        </View> */}
 
-        <View style={mystyles.regButton}>
+        {/* <View style={mystyles.regButton}>
             <Button title='Register' color='white' />
-        </View>
+        </View> */}
+
+        <AppBtn title={'Login'} onPress={() => console.log('Login')}/>
+        <AppBtn title={'Register'} color='secondary' onPress={() => console.log('Register')}/>
+        
     </ImageBackground>
    
   )

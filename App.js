@@ -9,7 +9,15 @@ export default function App() {
  <>
       {/* <WelcomeScreen/> */}
       {/* <ViewImageScreen/> */}
-      <Card/>
+      {/* <Card/> */}
+
+      <View style={{backgroundColor: '#f8f4f4', padding:20, paddingTop:100}}>
+        <Card 
+          title="Jean jacket for sale"
+          subTitle="$100"
+          image={require('./app/assets/jeanJacket.jpg')}
+        />
+      </View>
  </>
 
   );

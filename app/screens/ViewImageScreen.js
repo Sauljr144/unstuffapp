@@ -1,9 +1,7 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import color from '../config/color'
-import { Feather } from '@expo/vector-icons'; 
-import { AntDesign } from '@expo/vector-icons'; 
-import { Ionicons } from '@expo/vector-icons'; 
+import { AntDesign, Ionicons } from '@expo/vector-icons'; 
 
 
 
