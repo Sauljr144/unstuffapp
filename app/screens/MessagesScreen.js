@@ -26,6 +26,8 @@ const messages = [
   },
 ];
 
+
+
 const MessagesScreen = () => {
   return (
     <Screen>
@@ -37,6 +39,8 @@ const MessagesScreen = () => {
             title={item.title}
             subTitle={item.description}
             image={item.image}
+            onPress={()=>console.log('from message screen', item)}
+            renderRightActions={() => <View style={{backgroundColor:'red', width:70}}/>}
           />
         )}
         ItemSeparatorComponent={ListItemSeparator}
