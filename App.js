@@ -18,10 +18,17 @@ import ListingsScreen from "./app/screens/ListingsScreen";
 import { useState } from "react";
 import AppTextInput from "./app/components/AppTextInput";
 import AppSwitch from "./app/components/AppSwitch";
+import AppPicker from "./app/components/AppPicker";
+import AppPicker2 from "./app/components/AppPicker2";
 
 export default function App() {
 
   const [firstName, setFirstName] = useState('This is our orginal text.');
+  const categories = [
+    { label: "Furniture", value: 1 },
+    { label: "Clothing", value: 2 },
+    { label: "Cameras", value: 3 },
+  ]
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
@@ -39,7 +46,12 @@ export default function App() {
         {/* <AppTextInput placeholder="Username" icon={"email"} /> */}
 
       {/* </Screen> */}
-      <AppSwitch/>
+      {/* <AppSwitch/> */}
+      <Screen>
+
+      <AppPicker2 items={categories} icon={"apps"} placeholder={'Category'}/>
+      <AppTextInput icon={"email"} placeholder={'Email'}/>
+      </Screen>
     </GestureHandlerRootView>
   );
 }
